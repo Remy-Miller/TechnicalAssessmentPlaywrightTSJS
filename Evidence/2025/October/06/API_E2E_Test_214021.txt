@@ -1,0 +1,131 @@
+
+Test Data Generated
+Response Code: -------------------
+{
+  "firstname": "Oleta",
+  "lastname": "Farrell",
+  "totalprice": 6425,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-10-05",
+    "checkout": "2026-10-16"
+  },
+  "additionalneeds": "Cleaning"
+}
+
+API Health Check Response
+Response Code: 201
+"Created"
+
+Create Token Response
+Response Code: 200
+{
+  "token": "b2bbfbc4d4d1116"
+}
+
+Create booking Response
+Response Code: 200
+{
+  "bookingid": 101,
+  "booking": {
+    "firstname": "Oleta",
+    "lastname": "Farrell",
+    "totalprice": 6425,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2026-10-05",
+      "checkout": "2026-10-16"
+    },
+    "additionalneeds": "Cleaning"
+  }
+}
+
+Read bookings by query parameters Response
+Response Code: 200
+[
+  {
+    "bookingid": 101
+  }
+]
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Oleta",
+  "lastname": "Farrell",
+  "totalprice": 6425,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-10-05",
+    "checkout": "2026-10-16"
+  },
+  "additionalneeds": "Cleaning"
+}
+
+Update full booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Oleta",
+  "lastname": "Updated-Farrell",
+  "totalprice": 5925,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-05",
+    "checkout": "2026-10-16"
+  },
+  "additionalneeds": "Updated-Cleaning"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Oleta",
+  "lastname": "Updated-Farrell",
+  "totalprice": 5925,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-05",
+    "checkout": "2026-10-16"
+  },
+  "additionalneeds": "Updated-Cleaning"
+}
+
+Update partial booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Oleta",
+  "lastname": "Patch-Farrell",
+  "totalprice": 5925,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-05",
+    "checkout": "2026-10-16"
+  },
+  "additionalneeds": "Updated-Cleaning"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Oleta",
+  "lastname": "Patch-Farrell",
+  "totalprice": 5925,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-05",
+    "checkout": "2026-10-16"
+  },
+  "additionalneeds": "Updated-Cleaning"
+}
+
+Delete booking by ID Response
+Response Code: 201
+"Created"
+
+Verify booking is deleted by ID Response
+Response Code: 404
+"Not Found"
+
+Verify booking is deleted by query parameters Response
+Response Code: 200
+[]

@@ -63,6 +63,25 @@ export class HelperBase{
 
     }
 
-
-
+    async createLogFile(): Promise<string> {
+      const now = new Date()
+    
+      const year = String(now.getFullYear())
+      const month = now.toLocaleString('default', { month: 'long' })
+      const day = String(now.getDate()).padStart(2, '0')
+      const hours = String(now.getHours()).padStart(2, '0')
+      const minutes = String(now.getMinutes()).padStart(2, '0')
+      const seconds = String(now.getSeconds()).padStart(2, '0')
+    
+      const dir = path.join('Evidence', year, month, day)
+      await fs.mkdir(dir, { recursive: true })
+    
+      const filePath = path.join(dir, `API_E2E_Test_${hours}${minutes}${seconds}.txt`)
+      return filePath
+    }
+    
+    async appendToLogFile(filePath: string, label: string, response: any, content: any ) {
+      const logEntry = `\n${label}\nResponse Code: ${response}\n${JSON.stringify(content, null, 2)}\n`
+      await fs.appendFile(filePath, logEntry)
+    }
 }

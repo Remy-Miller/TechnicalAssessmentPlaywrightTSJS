@@ -40,7 +40,7 @@ export async function createLogFile(): Promise<string> {
   const now = new Date()
 
   const year = String(now.getFullYear())
-  const month = String(now.getMonth() + 1).padStart(2, '0')
+  const month = now.toLocaleString('default', { month: 'long' })
   const day = String(now.getDate()).padStart(2, '0')
   const hours = String(now.getHours()).padStart(2, '0')
   const minutes = String(now.getMinutes()).padStart(2, '0')
@@ -54,6 +54,6 @@ export async function createLogFile(): Promise<string> {
 }
 
 export async function appendToLogFile(filePath: string, label: string, response: any, content: any ) {
-  const logEntry = `\n${label}\n${response}\n${JSON.stringify(content, null, 2)}\n`;
-  await fs.appendFile(filePath, logEntry);
+  const logEntry = `\n${label}\nResponse Code: ${response}\n${JSON.stringify(content, null, 2)}\n`
+  await fs.appendFile(filePath, logEntry)
 }

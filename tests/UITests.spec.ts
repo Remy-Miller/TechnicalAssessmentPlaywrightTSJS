@@ -7,7 +7,8 @@ test.beforeEach(async({page}) => {
     await page.waitForSelector('.login_logo')
   })
 
-test.describe('Regression Pack Release X', () =>{
+test.describe.configure({ mode: 'parallel' })
+test.describe('Regression Test Pack - Release X @Regression',  () =>{
   test('Standard User Checkout Experience', async ({page}) => {
     const pm = new PageManager(page)
     
@@ -41,7 +42,6 @@ test('Locked Out User Checkout Experience', async ({page}) => {
 })
 
 test('Problem User Checkout Experience', async ({page}) => {
-    test.fail(true, "Inventory Pages are misaligned to Product pages names/descriptions")
     const pm = new PageManager(page)
 
     await pm.loginAs().problemUserUserLogin()
@@ -72,7 +72,6 @@ test('Performance Glitch User Checkout Experience', async ({page}) => {
 })
 
 test('Error User Checkout Experience', async ({page}) => {
-    test.fail(true, "Remove Cart buttons for 3/6 products are not functioning as expected")
     const pm = new PageManager(page)
 
     await pm.loginAs().errorUserLogin()

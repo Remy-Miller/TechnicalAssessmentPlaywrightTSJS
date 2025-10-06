@@ -46,18 +46,34 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'UITests',
+      name: 'APITests',
+      use: { ...devices['Desktop Chrome'],
+      baseURL: 'https://restful-booker.herokuapp.com',
+       },
+    },
+
+    {
+      name: 'UITests-Chrome',
       use: { ...devices['Desktop Chrome'],
       baseURL: 'https://www.saucedemo.com/',
        },
     },
 
     {
-      name: 'APITests',
-      use: { ...devices['Desktop Chrome'],
-      baseURL: 'https://restful-booker.herokuapp.com',
+      name: 'UITests-Firefox',
+      use: { ...devices['Desktop Firefox'],
+      baseURL: 'https://www.saucedemo.com/',
        },
     },
+
+    {
+      name: 'UITests-webkit',
+      use: { ...devices['Desktop Safari'],
+      baseURL: 'https://www.saucedemo.com/',
+       },
+    },
+
+    
 
     {
       name: 'UAT',
