@@ -1,0 +1,127 @@
+
+Test Data Generated
+-------------------
+{
+  "firstname": "Nichole",
+  "lastname": "Spinka-McClure",
+  "totalprice": 8103,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-07-07",
+    "checkout": "2026-07-29"
+  },
+  "additionalneeds": "Gardening"
+}
+
+API Health Check Response
+201
+"Created"
+
+Create Token Response
+200
+{
+  "token": "e479225bd90367d"
+}
+
+Create booking Response
+200
+{
+  "bookingid": 735,
+  "booking": {
+    "firstname": "Nichole",
+    "lastname": "Spinka-McClure",
+    "totalprice": 8103,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2026-07-07",
+      "checkout": "2026-07-29"
+    },
+    "additionalneeds": "Gardening"
+  }
+}
+
+Read bookings by query paramaters Response
+200
+[
+  {
+    "bookingid": 735
+  }
+]
+
+Read booking by ID Response
+200
+{
+  "firstname": "Nichole",
+  "lastname": "Spinka-McClure",
+  "totalprice": 8103,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-07-07",
+    "checkout": "2026-07-29"
+  },
+  "additionalneeds": "Gardening"
+}
+
+Update full booking by ID Response
+200
+{
+  "firstname": "Updated-Nichole",
+  "lastname": "Updated-Spinka-McClure",
+  "totalprice": 7603,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-07",
+    "checkout": "2026-07-29"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Read booking by ID Response
+200
+{
+  "firstname": "Updated-Nichole",
+  "lastname": "Updated-Spinka-McClure",
+  "totalprice": 7603,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-07",
+    "checkout": "2026-07-29"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Update partial booking by ID Response
+200
+{
+  "firstname": "Patch-Nichole",
+  "lastname": "Patch-Spinka-McClure",
+  "totalprice": 7603,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-07",
+    "checkout": "2026-07-29"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Read booking by ID Response
+200
+{
+  "firstname": "Patch-Nichole",
+  "lastname": "Patch-Spinka-McClure",
+  "totalprice": 7603,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-07",
+    "checkout": "2026-07-29"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Delete booking by ID Response
+201
+"Created"
+
+Verify booking is deleted by ID Response
+404
+"Not Found"

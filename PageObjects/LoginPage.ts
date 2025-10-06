@@ -1,7 +1,7 @@
 import { Locator, Page, expect } from "@playwright/test";
+import { HelperBase } from "./HelperBase";
 
-export class LoginPage{
-    readonly page: Page
+export class LoginPage extends HelperBase{
     readonly AcceptedUsernames: Locator
     readonly PasswordForAllUsers: Locator
     readonly FormUsername: Locator
@@ -10,7 +10,7 @@ export class LoginPage{
     readonly LockedOutErrorMessage: Locator
 
     constructor(page: Page){
-        this.page = page
+        super(page)
         this.AcceptedUsernames = page.locator('.login_credentials')
         this.PasswordForAllUsers = page.locator('.login_password')
         this.FormUsername = page.locator('form input[name="user-name"]')
@@ -26,7 +26,9 @@ export class LoginPage{
 
         await this.FormUsername.fill(users[0])
         await this.FormPassword.fill(password[0])
+        // await this.page.screenshot({path: await this.timestampGenerator()})
         await this.FormLoginButton.click()
+        
     }
 
     async lockedOutUserLogin(){

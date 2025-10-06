@@ -1,17 +1,16 @@
 import { test, expect } from '@playwright/test';
 import {PageManager} from '../PageObjects/PageManager'
 
-let users: string[] = []
-let password: string[] = []
 
 test.beforeEach(async({page}) => {
-    await page.goto('https://www.saucedemo.com/')
+    await page.goto('/')
     await page.waitForSelector('.login_logo')
   })
 
 test.describe('Regression Pack Release X', () =>{
   test('Standard User Checkout Experience', async ({page}) => {
     const pm = new PageManager(page)
+    
     await pm.loginAs().standardUserLogin()
     await pm.inventoryManagement().addAllProductsToCartFromIndividualProductPages()
     await pm.inventoryManagement().removeAllProductsFromCartFromIndvidualProductCards()
@@ -28,6 +27,7 @@ test.describe('Regression Pack Release X', () =>{
 test('Locked Out User Checkout Experience', async ({page}) => {
     test.fail(true, "A Locked Out User is attempting to login - functionality to block the user from logging in is operation as expected")
     const pm = new PageManager(page)
+
     await pm.loginAs().lockedOutUserLogin()
     await pm.inventoryManagement().addAllProductsToCartFromIndividualProductPages()
     await pm.inventoryManagement().removeAllProductsFromCartFromIndvidualProductCards()
@@ -43,6 +43,7 @@ test('Locked Out User Checkout Experience', async ({page}) => {
 test('Problem User Checkout Experience', async ({page}) => {
     test.fail(true, "Inventory Pages are misaligned to Product pages names/descriptions")
     const pm = new PageManager(page)
+
     await pm.loginAs().problemUserUserLogin()
     await pm.inventoryManagement().addAllProductsToCartFromIndividualProductPages()
     await pm.inventoryManagement().removeAllProductsFromCartFromIndvidualProductCards()
@@ -57,6 +58,7 @@ test('Problem User Checkout Experience', async ({page}) => {
 
 test('Performance Glitch User Checkout Experience', async ({page}) => {
     const pm = new PageManager(page)
+
     await pm.loginAs().performanceGlitchUserLogin()
     await pm.inventoryManagement().addAllProductsToCartFromIndividualProductPages()
     await pm.inventoryManagement().removeAllProductsFromCartFromIndvidualProductCards()
@@ -72,6 +74,7 @@ test('Performance Glitch User Checkout Experience', async ({page}) => {
 test('Error User Checkout Experience', async ({page}) => {
     test.fail(true, "Remove Cart buttons for 3/6 products are not functioning as expected")
     const pm = new PageManager(page)
+
     await pm.loginAs().errorUserLogin()
     await pm.inventoryManagement().addAllProductsToCartFromIndividualProductPages()
     await pm.inventoryManagement().removeAllProductsFromCartFromIndvidualProductCards()
@@ -86,6 +89,7 @@ test('Error User Checkout Experience', async ({page}) => {
 
 test('Visual User Checkout Experience', async ({page}) => {
     const pm = new PageManager(page)
+    
     await pm.loginAs().visualUserLogin()
     await pm.inventoryManagement().addAllProductsToCartFromIndividualProductPages()
     await pm.inventoryManagement().removeAllProductsFromCartFromIndvidualProductCards()
