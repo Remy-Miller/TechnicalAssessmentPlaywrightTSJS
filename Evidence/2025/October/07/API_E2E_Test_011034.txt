@@ -1,0 +1,131 @@
+
+Test Data Generated
+Response Code: -------------------
+{
+  "firstname": "Nella",
+  "lastname": "Turner",
+  "totalprice": 2073,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-09-13",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Lunch"
+}
+
+API Health Check Response
+Response Code: 201
+"Created"
+
+Create Token Response
+Response Code: 200
+{
+  "token": "2299522d5462b57"
+}
+
+Create booking Response
+Response Code: 200
+{
+  "bookingid": 4746,
+  "booking": {
+    "firstname": "Nella",
+    "lastname": "Turner",
+    "totalprice": 2073,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2026-09-13",
+      "checkout": "2026-10-06"
+    },
+    "additionalneeds": "Lunch"
+  }
+}
+
+Read bookings by query parameters Response
+Response Code: 200
+[
+  {
+    "bookingid": 4746
+  }
+]
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Nella",
+  "lastname": "Turner",
+  "totalprice": 2073,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-09-13",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Lunch"
+}
+
+Update full booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Nella",
+  "lastname": "Updated-Turner",
+  "totalprice": 1573,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-09-13",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Updated-Lunch"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Nella",
+  "lastname": "Updated-Turner",
+  "totalprice": 1573,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-09-13",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Updated-Lunch"
+}
+
+Update partial booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Nella",
+  "lastname": "Patch-Turner",
+  "totalprice": 1573,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-09-13",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Updated-Lunch"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Nella",
+  "lastname": "Patch-Turner",
+  "totalprice": 1573,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-09-13",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Updated-Lunch"
+}
+
+Delete booking by ID Response
+Response Code: 201
+"Created"
+
+Verify booking is deleted by ID Response
+Response Code: 404
+"Not Found"
+
+Verify booking is deleted by query parameters Response
+Response Code: 200
+[]

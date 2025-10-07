@@ -1,0 +1,131 @@
+
+Test Data Generated
+Response Code: -------------------
+{
+  "firstname": "Brody",
+  "lastname": "Reichel",
+  "totalprice": 9273,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-01",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Chauffeur"
+}
+
+API Health Check Response
+Response Code: 201
+"Created"
+
+Create Token Response
+Response Code: 200
+{
+  "token": "56e3b0a829f45cc"
+}
+
+Create booking Response
+Response Code: 200
+{
+  "bookingid": 4366,
+  "booking": {
+    "firstname": "Brody",
+    "lastname": "Reichel",
+    "totalprice": 9273,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-10-01",
+      "checkout": "2026-10-06"
+    },
+    "additionalneeds": "Chauffeur"
+  }
+}
+
+Read bookings by query parameters Response
+Response Code: 200
+[
+  {
+    "bookingid": 4366
+  }
+]
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Brody",
+  "lastname": "Reichel",
+  "totalprice": 9273,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-01",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Chauffeur"
+}
+
+Update full booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Brody",
+  "lastname": "Updated-Reichel",
+  "totalprice": 8773,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-10-01",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Updated-Chauffeur"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Brody",
+  "lastname": "Updated-Reichel",
+  "totalprice": 8773,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-10-01",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Updated-Chauffeur"
+}
+
+Update partial booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Brody",
+  "lastname": "Patch-Reichel",
+  "totalprice": 8773,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-10-01",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Updated-Chauffeur"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Brody",
+  "lastname": "Patch-Reichel",
+  "totalprice": 8773,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-10-01",
+    "checkout": "2026-10-06"
+  },
+  "additionalneeds": "Updated-Chauffeur"
+}
+
+Delete booking by ID Response
+Response Code: 201
+"Created"
+
+Verify booking is deleted by ID Response
+Response Code: 404
+"Not Found"
+
+Verify booking is deleted by query parameters Response
+Response Code: 200
+[]

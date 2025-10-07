@@ -1,0 +1,131 @@
+
+Test Data Generated
+Response Code: -------------------
+{
+  "firstname": "Creola",
+  "lastname": "Considine",
+  "totalprice": 2402,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-03-02",
+    "checkout": "2026-03-17"
+  },
+  "additionalneeds": "Gardening"
+}
+
+API Health Check Response
+Response Code: 201
+"Created"
+
+Create Token Response
+Response Code: 200
+{
+  "token": "e34c24bb4dbb076"
+}
+
+Create booking Response
+Response Code: 200
+{
+  "bookingid": 110,
+  "booking": {
+    "firstname": "Creola",
+    "lastname": "Considine",
+    "totalprice": 2402,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2026-03-02",
+      "checkout": "2026-03-17"
+    },
+    "additionalneeds": "Gardening"
+  }
+}
+
+Read bookings by query parameters Response
+Response Code: 200
+[
+  {
+    "bookingid": 110
+  }
+]
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Creola",
+  "lastname": "Considine",
+  "totalprice": 2402,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-03-02",
+    "checkout": "2026-03-17"
+  },
+  "additionalneeds": "Gardening"
+}
+
+Update full booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Creola",
+  "lastname": "Updated-Considine",
+  "totalprice": 1902,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-03-02",
+    "checkout": "2026-03-17"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Creola",
+  "lastname": "Updated-Considine",
+  "totalprice": 1902,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-03-02",
+    "checkout": "2026-03-17"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Update partial booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Creola",
+  "lastname": "Patch-Considine",
+  "totalprice": 1902,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-03-02",
+    "checkout": "2026-03-17"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Creola",
+  "lastname": "Patch-Considine",
+  "totalprice": 1902,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-03-02",
+    "checkout": "2026-03-17"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Delete booking by ID Response
+Response Code: 201
+"Created"
+
+Verify booking is deleted by ID Response
+Response Code: 404
+"Not Found"
+
+Verify booking is deleted by query parameters Response
+Response Code: 200
+[]

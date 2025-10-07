@@ -21,8 +21,6 @@ export function generateBookingData() {
   checkout.setDate(checkin.getDate() + daysToAdd)
   const checkoutDate = checkout.toISOString().split('T')[0]
 
-  console.log(firstname, lastname, totalprice, depositpaid, checkinDate, checkoutDate, additionalneeds)
-
   return {
     firstname,
     lastname,

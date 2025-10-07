@@ -1,5 +1,0 @@
-npm install - install all dependancies upon cloning
-
-npx playwright test tests/APITests.spec.ts --project=APITests
-
-npx playwright test tests/UITests.spec.ts --project=UITests

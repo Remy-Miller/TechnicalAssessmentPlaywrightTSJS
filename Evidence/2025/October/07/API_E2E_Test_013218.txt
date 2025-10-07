@@ -1,0 +1,131 @@
+
+Test Data Generated
+Response Code: -------------------
+{
+  "firstname": "Ola",
+  "lastname": "Dach",
+  "totalprice": 5760,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-10-19",
+    "checkout": "2026-11-07"
+  },
+  "additionalneeds": "Cleaning"
+}
+
+API Health Check Response
+Response Code: 201
+"Created"
+
+Create Token Response
+Response Code: 200
+{
+  "token": "fe8015199da0de1"
+}
+
+Create booking Response
+Response Code: 200
+{
+  "bookingid": 885,
+  "booking": {
+    "firstname": "Ola",
+    "lastname": "Dach",
+    "totalprice": 5760,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2026-10-19",
+      "checkout": "2026-11-07"
+    },
+    "additionalneeds": "Cleaning"
+  }
+}
+
+Read bookings by query parameters Response
+Response Code: 200
+[
+  {
+    "bookingid": 885
+  }
+]
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Ola",
+  "lastname": "Dach",
+  "totalprice": 5760,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-10-19",
+    "checkout": "2026-11-07"
+  },
+  "additionalneeds": "Cleaning"
+}
+
+Update full booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Ola",
+  "lastname": "Updated-Dach",
+  "totalprice": 5260,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-19",
+    "checkout": "2026-11-07"
+  },
+  "additionalneeds": "Updated-Cleaning"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Ola",
+  "lastname": "Updated-Dach",
+  "totalprice": 5260,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-19",
+    "checkout": "2026-11-07"
+  },
+  "additionalneeds": "Updated-Cleaning"
+}
+
+Update partial booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Ola",
+  "lastname": "Patch-Dach",
+  "totalprice": 5260,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-19",
+    "checkout": "2026-11-07"
+  },
+  "additionalneeds": "Updated-Cleaning"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Ola",
+  "lastname": "Patch-Dach",
+  "totalprice": 5260,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-10-19",
+    "checkout": "2026-11-07"
+  },
+  "additionalneeds": "Updated-Cleaning"
+}
+
+Delete booking by ID Response
+Response Code: 201
+"Created"
+
+Verify booking is deleted by ID Response
+Response Code: 404
+"Not Found"
+
+Verify booking is deleted by query parameters Response
+Response Code: 200
+[]

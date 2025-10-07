@@ -8,8 +8,8 @@
     "UITests-Chrome": "npx playwright test tests/UITests.spec.ts --project=UITests-Chrome",
     "UITests-Firefox": "npx playwright test tests/UITests.spec.ts --project=UITests-Firefox",
     "UITests-webkit": "npx playwright test tests/UITests.spec.ts --project=UITests-webkit",
-    "UITests-All": "npm run UITests-Chrome & npm run UITests-Firefox & npm run UITests-webkit"
-
+    "UITests-All": "npm run UITests-Chrome & npm run UITests-Firefox & npm run UITests-webkit",
+    "ShowMonocartReport": "npx monocart show-report test-results/report.html"
   },
   "repository": {
     "type": "git",

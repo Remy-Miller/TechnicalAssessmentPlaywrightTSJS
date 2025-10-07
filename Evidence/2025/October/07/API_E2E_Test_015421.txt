@@ -1,0 +1,131 @@
+
+Test Data Generated
+Response Code: -------------------
+{
+  "firstname": "Leatha",
+  "lastname": "Medhurst",
+  "totalprice": 6299,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-01-01",
+    "checkout": "2026-01-28"
+  },
+  "additionalneeds": "Gardening"
+}
+
+API Health Check Response
+Response Code: 201
+"Created"
+
+Create Token Response
+Response Code: 200
+{
+  "token": "78f0832c068a77d"
+}
+
+Create booking Response
+Response Code: 200
+{
+  "bookingid": 2047,
+  "booking": {
+    "firstname": "Leatha",
+    "lastname": "Medhurst",
+    "totalprice": 6299,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2026-01-01",
+      "checkout": "2026-01-28"
+    },
+    "additionalneeds": "Gardening"
+  }
+}
+
+Read bookings by query parameters Response
+Response Code: 200
+[
+  {
+    "bookingid": 2047
+  }
+]
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Leatha",
+  "lastname": "Medhurst",
+  "totalprice": 6299,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-01-01",
+    "checkout": "2026-01-28"
+  },
+  "additionalneeds": "Gardening"
+}
+
+Update full booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Leatha",
+  "lastname": "Updated-Medhurst",
+  "totalprice": 5799,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-01-01",
+    "checkout": "2026-01-28"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Leatha",
+  "lastname": "Updated-Medhurst",
+  "totalprice": 5799,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-01-01",
+    "checkout": "2026-01-28"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Update partial booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Leatha",
+  "lastname": "Patch-Medhurst",
+  "totalprice": 5799,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-01-01",
+    "checkout": "2026-01-28"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Leatha",
+  "lastname": "Patch-Medhurst",
+  "totalprice": 5799,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-01-01",
+    "checkout": "2026-01-28"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Delete booking by ID Response
+Response Code: 201
+"Created"
+
+Verify booking is deleted by ID Response
+Response Code: 404
+"Not Found"
+
+Verify booking is deleted by query parameters Response
+Response Code: 200
+[]

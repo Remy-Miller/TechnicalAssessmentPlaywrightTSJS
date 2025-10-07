@@ -1,0 +1,131 @@
+
+Test Data Generated
+Response Code: -------------------
+{
+  "firstname": "Alison",
+  "lastname": "Cummerata",
+  "totalprice": 8095,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-09-23",
+    "checkout": "2026-09-29"
+  },
+  "additionalneeds": "Gardening"
+}
+
+API Health Check Response
+Response Code: 201
+"Created"
+
+Create Token Response
+Response Code: 200
+{
+  "token": "4ccb8f9aee2de75"
+}
+
+Create booking Response
+Response Code: 200
+{
+  "bookingid": 2108,
+  "booking": {
+    "firstname": "Alison",
+    "lastname": "Cummerata",
+    "totalprice": 8095,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2026-09-23",
+      "checkout": "2026-09-29"
+    },
+    "additionalneeds": "Gardening"
+  }
+}
+
+Read bookings by query parameters Response
+Response Code: 200
+[
+  {
+    "bookingid": 2108
+  }
+]
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Alison",
+  "lastname": "Cummerata",
+  "totalprice": 8095,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-09-23",
+    "checkout": "2026-09-29"
+  },
+  "additionalneeds": "Gardening"
+}
+
+Update full booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Alison",
+  "lastname": "Updated-Cummerata",
+  "totalprice": 7595,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-09-23",
+    "checkout": "2026-09-29"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Updated-Alison",
+  "lastname": "Updated-Cummerata",
+  "totalprice": 7595,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-09-23",
+    "checkout": "2026-09-29"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Update partial booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Alison",
+  "lastname": "Patch-Cummerata",
+  "totalprice": 7595,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-09-23",
+    "checkout": "2026-09-29"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Read booking by ID Response
+Response Code: 200
+{
+  "firstname": "Patch-Alison",
+  "lastname": "Patch-Cummerata",
+  "totalprice": 7595,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-09-23",
+    "checkout": "2026-09-29"
+  },
+  "additionalneeds": "Updated-Gardening"
+}
+
+Delete booking by ID Response
+Response Code: 201
+"Created"
+
+Verify booking is deleted by ID Response
+Response Code: 404
+"Not Found"
+
+Verify booking is deleted by query parameters Response
+Response Code: 200
+[]
